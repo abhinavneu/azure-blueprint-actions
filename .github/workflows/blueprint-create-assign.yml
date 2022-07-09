@@ -7,7 +7,7 @@ on:
         description: 'Name of the Blueprint to be Deployed'
         required: true
 
-      Assignement_Name:
+      Assignment_Name:
         description: 'Name of the Blueprint to be Deployed'
         required: true
 
@@ -27,7 +27,7 @@ jobs:
         with:
           scope: Subscription
           azureSubscriptionID: ${{ secrets.AZURESUBSCRIPTIONID }}
-          blueprintName: ${{ github.events.inputs.Blueprint_Name }}
+          blueprintName: ${{ github.event.inputs.Blueprint_Name }}
           blueprintPath: Blueprints/
 
       - name: Assign Azure Blueprint
@@ -39,6 +39,6 @@ jobs:
         with:
           scope: Subscription
           azureSubscriptionID: ${{ secrets.AZURESUBSCRIPTIONID }}
-          AssignmentName: ${{ github.events.inputs.Assignement_Name }}
-          blueprintName: ${{ github.events.inputs.Blueprint_Name }}
+          AssignmentName: ${{ github.event.inputs.Assignment_Name }}
+          blueprintName: ${{ github.event.inputs.Blueprint_Name }}
           AssignmentFilePath: Blueprints/assign.json
