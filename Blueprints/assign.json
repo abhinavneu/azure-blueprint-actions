@@ -1,18 +1,18 @@
 {
     "identity": {
         "type": "userAssigned",
-        "tenantId": "#### TENANT_ID ####",
+        "tenantId": "687f51c3-0c5d-4905-84f8-97c683a5b9d1",
         "userAssignedIdentities": {
-            "#### RESOURCE ID OF USER ASSIGNED IDENTITY ####" : {}
+            "/subscriptions/f48d9107-72e2-4044-b1c3-f6c32c6b0de7/resourcegroups/neu-dev-data-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/neu-mngid-blp" : {}
         }
     },
-    "location": "#### LOCATION WITHOUT SPACES ####",
+    "location": "eastus",
     "properties":{
-        "blueprintId": "/subscriptions/#### SUBSCRIPTION ID ####/providers/Microsoft.Blueprint/blueprints/#### BLUEPRINT NAME ####",
+        "blueprintId": "/subscriptions/f48d9107-72e2-4044-b1c3-f6c32c6b0de7/providers/Microsoft.Blueprint/blueprints/blp-strg-gitactions",
         "resourceGroups":{
             "ResourceGroup": {
-                "name": "#### RESOURCE GROUP NAME ####",
-                "location": "#### LOCATION WITHOUT SPACES ####"
+                "name": "neu-dev-data-rg",
+                "location": "eastus"
             }
         },
         "locks": {
@@ -20,13 +20,13 @@
         },
         "parameters": {
             "location" : {
-                "value": "#### LOCATION WITHOUT SPACES ####",
+                "value": "eastus",
                 "metadata": {
                     "description": "Location where the resources have to be deployed without spaces"
                 }
             },
             "storageName" : {
-                "value": "#### STORAGE ACCOUNT NAME (MUST BE UNIQUE) ####",
+                "value": "neuabhstrgde9834",
                 "metadata": {
                     "description": "Name of the Storage Account"
                 }
